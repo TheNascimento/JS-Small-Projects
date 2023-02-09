@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+    Author: Tiago Luiz C. do Nascimento
+    Date: 07/28/2019
+
+    Exercise in JS from "Curso em Video" Javascript course.
+-->
+<html lang="pt-br">
+    <head>
+        <title>Eventos DOM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            div#area {
+                font: normal 20pt Arial;
+                background: rgb(42, 139, 42);
+                color: white;
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="area">
+            Interaja...
+        </div>
+        
+        <script>
+            var area = window.document.getElementById("area");
+            area.addEventListener("click", clicked);
+            area.addEventListener("mouseenter", enter);
+            area.addEventListener("mouseout", exit);
+            
+            function clicked() {
+                area.innerText = "Clicou!";
+                area.style.background = "red";
+            }
+            
+            function enter() {
+                area.innerText = "Entrou!";
+            }
+            
+            function exit() {
+                area.innerText = "Saiu!";
+                area.style.background = "green";
+            }
+        </script>
+    </body>
+</html>

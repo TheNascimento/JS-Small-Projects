@@ -1,0 +1,26 @@
+var strong = prompt("Before we begin, answer some questions (answer 'Yes' or 'No'): do you think you are strong?").toLowerCase();
+var cunning = prompt("Do you think you are intelligent?").toLowerCase();
+var lucky = prompt("Are you feeling lucky?").toLowerCase();
+var user = prompt("Now we begin: on a bright day of summer you are wandering in the forest as you always do after the lunch. But this day you found something unnusual: a group of 4 bandits setting a trap on the road in front of you. You found then only because one of the bad guys was babbling about being hungry. They didn't appear to have seen you, so you can have the first hand, you can either run back the way you came (Run*), try to fight to bandits by surprise (Fight*) or set your own trap (Trap*). What do you do? (* Use those words to anwer)").toLowerCase();
+
+switch(user) {
+    case 'run':
+        console.log("Well you run away with success, and saved your own life. But because of this, other people unaware of the bandits will be caught on theyr trap, and God knows, what they'll do with those poor people...");
+        break;
+    case 'fight':
+        if(strong === 'yes' && cunning === 'yes') {
+            console.log("Great work might knight, you beat those bad guys, with just a broken nose. Because of your power you received a reward and became know as a hero!");
+        } else {
+            console.log("Nice try brave one but these guys are 4 and stronger than you think. You fight well and managed to knock one down but you were no match for then. They killed you... but you did the right thing, pherhaps you should have been more intelligent, those bandits soon will get what they deserve.");}
+        break;
+    case 'trap':
+        if(cunning === 'yes' || lucky ==='yes') {
+            console.log("Great work! With your good timing and cunning you were able to set the perfect trap, actually using theyr own, and cought the bandits. You call some guards nearby and received a nice reward. Your mom proud.");
+        } else {
+            console.log("You weren't that smart, poor. The bandits have captured you and now you don't know what they will do with you...");    
+        }
+        break;
+    default:
+        console.log("You think this is a joke? Well because of you lack of responsibylity you did not act and a poor man fell in the trap of the bandits, got robbed and killed. Perhaps next you indeed ACT as needed.");
+}
+

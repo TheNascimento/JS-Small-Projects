@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+    Author: Tiago Luiz C. do Nascimento
+    Date: 07/28/2019
+
+    Exercise in JS from "Curso em Video" Javascript course.
+-->
+<html lang="pt-br">
+    <head>
+        <title>Somando Números</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font: normal 18pt Arial;
+            }
+            
+            input {
+                font: normal 18pt Arial;
+                width: 100px;
+            }
+            
+            div#resultado {
+                margin-top: 20px;
+            }
+        </style>
+    <body>
+        <h1>
+            Somando Valores
+        </h1>
+        <input type="number" name="text1" id="text1" />
+        <input type="number" name="text2" id="text2" /> 
+        <input type="button" value="Somar" onclick="doSum()">
+        <div id="resultado">
+            Resultado
+        </div>
+        <script>
+            function doSum() {
+                var textValue1 = window.document.getElementById("text1");
+                var textValue2 = window.document.querySelector("input#text2");
+                var resultado = window.document.getElementById("resultado");
+                var number1 = Number(textValue1.value);
+                var number2 = Number(textValue2.value);
+                var theSum = number1 + number2;
+                resultado.innerHTML = `A soma entre ${number1} e ${number2} é <strong>${theSum}</strong>`;
+            }
+        </script>    
+    </body>
+</html>
